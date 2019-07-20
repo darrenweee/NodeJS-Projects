@@ -19,10 +19,7 @@ var pathhome = '/api';
 
 app.get(pathhome + '/teachers', tscontroller.findAll)
 
-app.get(pathhome + '/commonstudents', function (req, res) {
-	tscontroller.findCommon(req, res);
-
-})
+app.get(pathhome + '/commonstudents',tscontroller.findCommon)
 
 app.post('/api/register', tscontroller.create);
 
